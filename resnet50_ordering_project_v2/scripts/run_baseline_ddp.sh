@@ -1,0 +1,2 @@
+#!/bin/bash
+torchrun --nproc_per_node=4 main.py   --data-path /home/yeom10/workspace/data/imagenet_fixed   --output-dir /home/yeom10/workspace/ckpts/ResNet50_Ordering/baseline_v3_ddp   --model-type baseline   --pretrained-backbone   --epochs 300   --warmup-epochs 20   --batch-size 16   --num-workers 8   --base-lr 1e-3   --weight-decay 0.05   --label-smoothing 0.1   --grad-clip 5.0   --use-amp   --amp-dtype bf16
